@@ -1,0 +1,16 @@
+.idea
+Car
+Bird
+Dog
+FGVC
+pre_trained
+slim.egg-info
+BUILD
+WORKSPACE
+dist
+nohup.out
+build
+scripts
+*.pyc
+.DS_Store
+__init__.py
