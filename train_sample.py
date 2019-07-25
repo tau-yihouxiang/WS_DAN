@@ -495,45 +495,6 @@ def main(_):
             center_loss = tf.identity(center_loss * weights, name=name + '_loss')
             return center_loss
 
-        def random_crop(images):
-            batch_size, height, width, _ = images.shape
-            bboxes = []
-            for i in range(batch_size):
-                ymin = random.uniform(0.0, 0.5)
-                xmin = random.uniform(0.0, 0.5)
-                ymax = random.uniform(ymin + 0.2, 1.0)
-                xmax = random.uniform(xmin + 0.2, 1.0)
-
-                bbox = np.asarray([ymin, xmin, ymax, xmax], dtype=np.float32)
-                bboxes.append(bbox)
-            bboxes = np.asarray(bboxes, np.float32)
-            return bboxes
-
-        def random_drop(images):
-            batch_size, height, width, _ = images.shape
-            masks = []
-            for i in range(batch_size):
-                ymin = random.uniform(0.0, 0.8)
-                xmin = random.uniform(0.0, 0.8)
-                bh = random.uniform(0.2, 0.5)
-                bw = random.uniform(0.2, 0.5)
-
-                ymin = int(ymin * height)
-                xmin = int(xmin * width)
-                ymax = ymin + int(bh * height)
-                xmax = xmin + int(bw * width)
-
-                ymin = max(0, min(ymin, height))
-                xmin = max(0, min(xmin, width))
-                ymax = max(0, min(ymax, height))
-                xmax = max(0, min(xmax, width))
-
-                mask = np.ones(shape=[height, width, 1], dtype=np.float32)
-                mask[ymin: ymax, xmin: xmax] = 0
-                masks.append(mask)
-            masks = np.asarray(masks, np.float32)
-            return masks
-
         def attention_crop(attention_maps):
             batch_size, height, width, num_parts = attention_maps.shape
             bboxes = []
