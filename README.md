@@ -2,7 +2,7 @@
 
 This is the official TensorFlow implementation of WS-DAN.
 
-[See Better Before Looking Closer: Weakly Supervised Data Augmentation Network for Fine-Grained Visual Classification](https://arxiv.org/abs/1901.09891). 
+[See Better Before Looking Closer: Weakly Supervised Data Augmentation Network for Fine-Grained Visual Classification](https://arxiv.org/abs/1901.09891).
 
 ## Compatibility
 * The code is tested using Tensorflow r1.6 under Ubuntu 16.04 with Python 2.7.
@@ -23,11 +23,11 @@ $ pip install tqdm
 ```
 
 ## Datasets and Pre-trained models
-|   Datasets    | #Attention | Pre-trained model | Accuracy(%) |
-|:-------------:|:----------:|:------------------:|:-----------:|
-|  [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) |     32     |      WS-DAN        |     89.4    |
-|  [Stanford-Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html)|     32     |      WS-DAN        |     94.5    |
-|  [FGVC-Aircraft](http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/)|     32     |      WS-DAN        |     93.0    |
+|   Datasets    | #Attention | Pre-trained model |
+|:-------------:|:----------:|:------------------:|
+|  [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) |     32     |      WS-DAN         |
+|  [Stanford-Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html)|     32     |      WS-DAN        |    
+|  [FGVC-Aircraft](http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/)|     32     |      WS-DAN        |   
 
 
 ## Inspiration
