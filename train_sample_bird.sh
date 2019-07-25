@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DATASET="Bird"
-TRAIN_DIR="./$DATASET/WS_DAN/TRAIN/ws_dan_part_32"
+TRAIN_DIR="./$DATASET/WS_DAN/TRAIN/ws_dan_part_32_prob"
 MODEL_PATH='./pre_trained/inception_v3.ckpt'
 
 python train_sample.py --learning_rate=0.001\

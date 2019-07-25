@@ -500,10 +500,10 @@ def main(_):
             bboxes = []
             for i in range(batch_size):
                 attention_map = attention_maps[i]
-                # part_weights = attention_map.mean(axis=0).mean(axis=0)
-                # part_weights = np.sqrt(part_weights)
-                # part_weights = part_weights / np.sum(part_weights)
-                selected_index = np.random.choice(np.arange(0, num_parts), 1)[0]
+                part_weights = attention_map.mean(axis=0).mean(axis=0)
+                part_weights = np.sqrt(part_weights)
+                part_weights = part_weights / np.sum(part_weights)
+                selected_index = np.random.choice(np.arange(0, num_parts), 1, p=part_weights)[0]
 
                 mask = attention_map[:, :, selected_index]
 
@@ -525,10 +525,10 @@ def main(_):
             masks = []
             for i in range(batch_size):
                 attention_map = attention_maps[i]
-                # part_weights = attention_map.mean(axis=0).mean(axis=0)
-                # part_weights = np.sqrt(part_weights)
-                # part_weights = part_weights / np.sum(part_weights)
-                selected_index = np.random.choice(np.arange(0, num_parts), 1)[0]
+                part_weights = attention_map.mean(axis=0).mean(axis=0)
+                part_weights = np.sqrt(part_weights)
+                part_weights = part_weights / np.sum(part_weights)
+                selected_index = np.random.choice(np.arange(0, num_parts), 1, p=part_weights)[0]
                 mask = attention_map[:, :, selected_index:selected_index + 1]
 
                 # soft mask
