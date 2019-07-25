@@ -5,7 +5,7 @@ This is the official TensorFlow implementation of WS-DAN.
 [See Better Before Looking Closer: Weakly Supervised Data Augmentation Network for Fine-Grained Visual Classification](https://arxiv.org/abs/1901.09891).
 
 ## Compatibility
-* The code is tested using Tensorflow r1.6 under Ubuntu 16.04 with Python 2.7.
+* The code is tested using Tensorflow r1.x under Ubuntu 16.04 with Python 2.x and Python 3.x.
 
 * Recommend Environment: Anaconda
 
