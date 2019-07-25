@@ -134,9 +134,7 @@ $ tensorboard --logdir=/path/to/model_dir --port=8081
 ```
 
 ## Contact
-Author: Tao Hu
-
-Email: hutao16@mails.ucas.ac.cn
+Email: yihouxiang@gmail.com
 
 ## License
 MIT
