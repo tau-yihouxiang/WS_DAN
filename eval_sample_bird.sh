@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 DATASET="Bird"
-TRAIN_DIR="./$DATASET/WS_DAN/TRAIN/ws_dan_part_32_prob"
-TEST_DIR="./$DATASET/WS_DAN/TEST/ws_dan_part_32_prob"
+TRAIN_DIR="./$DATASET/WS_DAN/TRAIN/ws_dan_part_32_pre"
+TEST_DIR="./$DATASET/WS_DAN/TEST/ws_dan_part_32_pre"
 
 python eval_sample.py --checkpoint_path=$TRAIN_DIR \
                          --dataset_name=$DATASET \
@@ -10,7 +10,7 @@ python eval_sample.py --checkpoint_path=$TRAIN_DIR \
                          --dataset_dir="./$DATASET/Data/tfrecords" \
                          --eval_dir=$TEST_DIR \
                          --model_name='inception_v3_bap' \
-                         --batch_size=16 \
+                         --batch_size=8 \
                          --eval_image_size=448\
                          --gpus="0"\
                          --num_classes=200\

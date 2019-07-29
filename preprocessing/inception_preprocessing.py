@@ -206,15 +206,15 @@ def preprocess_for_train(image, height, width, bbox,
       tf.summary.image('image_with_bounding_boxes', image_with_box)
 
     # distorted_image, distorted_bbox = distorted_bounding_box_crop(image, bbox)
-    # ratio = 0.875
-    # distorted_image = tf.expand_dims(image, 0)
-    # distorted_image = tf.image.resize_images(distorted_image, (int(height / ratio), int(width / ratio)))
-    # distorted_image = tf.squeeze(distorted_image, 0)
-    # distorted_image = tf.random_crop(distorted_image, (height, width, 3))
-    # distorted_bbox = bbox
-
-    distorted_image = image
+    ratio = 0.875
+    distorted_image = tf.expand_dims(image, 0)
+    distorted_image = tf.image.resize_images(distorted_image, (int(height / ratio), int(width / ratio)))
+    distorted_image = tf.squeeze(distorted_image, 0)
+    distorted_image = tf.random_crop(distorted_image, (height, width, 3))
     distorted_bbox = bbox
+
+    # distorted_image = image
+    # distorted_bbox = bbox
 
 
     # Restore the shape since the dynamic slice based upon the bbox_size loses
