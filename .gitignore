@@ -13,4 +13,3 @@ build
 scripts
 *.pyc
 .DS_Store
-__init__.py
