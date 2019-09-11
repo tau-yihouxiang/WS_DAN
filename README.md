@@ -11,8 +11,8 @@ This is the official TensorFlow implementation of WS-DAN.
 
 ## Requirements
 ```
-$ git clone git@github.com:tau-yihouxiang/Attention_Augument.git
-$ cd Attention_Augument
+$ git clone git@github.com:tau-yihouxiang/WS_DAN.git
+$ cd WS_DAN
 $ python setup.py install
 ```
 
