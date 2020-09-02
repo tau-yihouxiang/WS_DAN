@@ -136,5 +136,8 @@ $ tensorboard --logdir=/path/to/model_dir --port=8081
 ## Contact
 Email: yihouxiang@gmail.com
 
+## Other Re-implementation
+[Pytorch](https://github.com/GuYuc/WS-DAN.PyTorch)
+
 ## License
 MIT
